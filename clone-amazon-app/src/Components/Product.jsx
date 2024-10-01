@@ -14,7 +14,7 @@ const Product = ({ id, title, image, price, rating }) => {
           {Array(Math.floor(rating))
             .fill()
             .map((_, i) => (
-              <span key={i}>⭐</span>
+              <span key={i} role="img" aria-label="star">⭐</span>
             ))}
           <span>{rating}/5</span>
         </div>

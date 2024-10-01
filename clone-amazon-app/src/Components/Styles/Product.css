@@ -16,7 +16,7 @@
   display: flex;
 }
 
-.product > img {
+.product  img {
   max-height: 200px;
   width: 100%;
   object-fit: contain;
@@ -24,7 +24,7 @@
   z-index: -1;
 }
 
-.product > button {
+.product  button {
   background: #ff9f00;
   border: 1px solid;
   margin-top: 10px;

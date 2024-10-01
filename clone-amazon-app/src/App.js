@@ -1,27 +1,23 @@
-import React from 'react'
+import React from "react";
 import "./App.css";
-import Header from './Components/Header'
-import Home from './Components/Home'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import Home from "./Components/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Checkout from "./Components/Checkout";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
-    <div className="App">
-
-    <Router>
-    <Switch>
-      <Route path='/checkout'>
-      <Header />
-      <Checkout />
-
-      </Route>
-    </Switch>
-    
-    </Router>
-    <Header />
-    <Home />
-    </div>
+    <>
+      <Router>
+        <Navbar /> {/* Navbar will always render */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* Home route */}
+          <Route path="/checkout" element={<Checkout />} />
+          {/* Checkout route */}
+        </Routes>
+      </Router>
+    </>
   );
 }
 
