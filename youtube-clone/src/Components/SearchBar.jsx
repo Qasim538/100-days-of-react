@@ -1,10 +1,14 @@
-import React from 'react'
+import { useState } from "react"
+import Paper from '@mui/material/Paper';
+
 
 const SearchBar = () => {
   return (
-    <div>
-      SearchBar
-    </div>
+    <Paper elevation={6} styling={{padding: "25px"}}>
+
+      <TextField />
+
+    </Paper>
   )
 }
 

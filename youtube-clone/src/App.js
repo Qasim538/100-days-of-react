@@ -2,7 +2,7 @@ import { Grid2 } from "@mui/material";
 import SearchBar from "./Components/SearchBar";
 import VideoDetails from "./Components/VideoDetails";
 import VideoList from "./Components/VideoList";
-import Youtube from "./API/youtube";
+import Youtube from "./API/Youtube";
 
 function App() {
   return (
