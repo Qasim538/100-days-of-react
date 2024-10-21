@@ -34,7 +34,7 @@ td {
 }
 
 th {
-  background-color: rgb(117, 201, 250);
+  background-color: #8e8e8e;
 }
 
 /* td {
@@ -42,11 +42,11 @@ th {
 } */
 
 tr:nth-child(even) {
-  background-color: rgb(152, 213, 250);
+  background-color: #d1d1d1;
 
 }
 tr:nth-child(odd) {
-  background-color: rgb(162, 206, 234);
+  background-color: #dcdcdc;
 
 }
 
