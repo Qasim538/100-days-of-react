@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
+import Layout from "./Components/Layout";
+import Home from "./Pages/Home";
+import Details from "./Pages/Details";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
-        <h1 className='text-center text-5xl'>Hello world</h1>
-    </div>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/:slug" element={<Details />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
