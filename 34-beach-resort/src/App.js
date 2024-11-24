@@ -7,20 +7,16 @@ import Error from "./pages/Error";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 
-
-
-
-
-
 function App() {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <Routes>
         <Route exact path="/" Component={Home} />
         <Route exact path="/rooms/" Component={Rooms} />
         <Route exact path="/rooms/:slug" Component={SingleRoom} />
-        <Route Component={Error}/>
+        {/* This handles any unmatched routes */}
+        <Route path="*" Component={Error} />
       </Routes>
     </>
   );
