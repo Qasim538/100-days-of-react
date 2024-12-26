@@ -1,11 +1,11 @@
 import React from 'react'
 
-const VideoList = () => {
+const Review = () => {
   return (
     <div>
-      Lists
+      Single Reivew
     </div>
   )
 }
 
-export default VideoList
+export default Review
