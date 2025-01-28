@@ -1,20 +1,23 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Futuristic gradient background */
+  color: #ffffff;
 }
 
 .app-container {
   height: 400px;
   width: 300px;
-  background: #2b5870;
+  background: linear-gradient(145deg, #1c1f24, #31363e);
   border-radius: 20px;
-  box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3), 0 0 50px rgba(0, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
 }
 
 .temperature-display-container {
@@ -22,6 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 70%;
+  position: relative;
 }
 
 .temperature-display {
@@ -34,8 +38,15 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 48px;
-  border: 3px #ffffff solid;
-  transition: background 0.1s;
+  font-weight: bold;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(145deg, #2b5870, #1a3a50);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), inset 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.temperature-display:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.7), inset 0 0 30px rgba(0, 255, 255, 0.3);
 }
 
 button {
@@ -43,18 +54,23 @@ button {
   height: 80px;
   width: 80px;
   font-size: 32px;
+  font-weight: bold;
   color: #ffffff;
-  background: rgb(105, 104, 104);
-  border: 2px #ffffff solid;
+  background: linear-gradient(145deg, #424242, #505050);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background: rgb(184, 184, 184);
+  background: linear-gradient(145deg, #4f4f4f, #616161);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), inset 0 0 10px rgba(0, 255, 255, 0.3);
   cursor: pointer;
 }
 
 button:focus {
-  outline: 0;
+  outline: none;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
 }
 
 .button-container {
@@ -64,13 +80,16 @@ button:focus {
 }
 
 .neutral {
-  background: rgb(184, 184, 184);
+  background: linear-gradient(145deg, #a0a0a0, #c0c0c0);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .cold {
-  background: #035aa6;
+  background: linear-gradient(145deg, #004e92, #0068b9);
+  box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
 }
 
 .hot {
-  background: #ff5200;
+  background: linear-gradient(145deg, #ff3d00, #ff6b00);
+  box-shadow: 0 0 15px rgba(255, 90, 0, 0.5);
 }
